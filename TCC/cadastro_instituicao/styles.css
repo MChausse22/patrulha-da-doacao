@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+}
+
+.grid-columns {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#logo {
+    width: 75%;
+}

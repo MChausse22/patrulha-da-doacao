@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <div class="w3-third w3-container w3-cell">
+        <img src="../logo_branco.jpg" style="max-width: 100%" class="w3-border-right">
+    </div>
+        
+    <form action="confirmacao_cadastro.php" method="post" class="w3-container w3-cell w3-padding">
+        <h2><b>Cadastre-se</b></h2>
+
+        <label for="institution_name">
+            Nome Completo da Instituição
+        </label>
+        <input type="text" name="Nome" id="institution_name" class="w3-input w3-border w3-border-purple" required>
+
+        <label for="intitution_email">
+            Email
+        </label>
+        <input type="email" name="Email" id="intitution_email" class="w3-input w3-border w3-border-purple" required>
+
+        <label for="institution_password">
+            Senha
+        </label>
+        <input type="password" name="Senha" id="institution_password" class="w3-input w3-border w3-border-purple" required>
+
+        <label for="institution_type">
+            Seguimento
+        </label>
+        <select name="Seguimento" id="institution_type" class="w3-input w3-border w3-border-purple" required>
+            <option value="" selected></option>
+            <option value="Animais">Animais</option>
+            <option value="Crianças e Adolescentes">Crianças e Adolescentes</option>
+            <option value="Idosos">Idosos</option>
+            <option value="Deficientes">Deficientes</option>
+            <option value="Dependentes Químicos">Dependentes Químicos</option>
+            <option value="Alimentos e Higiene">Alimentos e Higiene</option>
+        </select>
+
+        <label for="cnpj">
+            CNPJ
+        </label>
+        <input type="number" name="CNPJ" id="cnpj" class="w3-input w3-border w3-border-purple" required> 
+
+        <label for="intitution_phone">
+            Telefone Comercial
+        </label>
+        <input type="number" name="Telefone" id="institution_phone" class="w3-input w3-border w3-border-purple" required>
+    
+        <label for="institution_address">
+            Logradouro
+        </label>
+        <input type="text" name="Logradouro" id="institution_address" class="w3-input w3-border w3-border-purple" required>
+
+        <label for="complemento">
+            Complemento
+        </label>
+        <input type="text" name="Complemento" id="complemento" class="w3-input w3-border w3-border-purple">
+    
+        <label for="bairo">
+            Bairro
+        </label>
+        <input type="text" name="Bairro" id="bairro" class="w3-input w3-border w3-border-purple" required>
+
+        <label for="uf">
+            UF
+        </label>
+        <select name="UF" id="uf" class="w3-input w3-border w3-border-purple" required>
+            <option value="" selected></option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select>
+
+        <label for="cep">
+            CEP
+        </label>
+        <input type="number" name="CEP" id="cep" class="w3-input w3-border w3-border-purple" required>
+
+        <label for="cidade">
+            Cidade
+        </label>
+        <input type="text" name="Cidade" id="cidade" class="w3-input w3-border w3-border-purple" required>
+        <br>
+        <button type="submit" class="w3-btn w3-purple">Registrar</button>
+    </form>
+</body>
+</html>

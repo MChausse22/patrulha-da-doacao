@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    border-bottom: 15px;
+}
+
+.nav a {
+    text-decoration-line: none;
+}
+
+.nav-img {
+    max-width: 25%;
+}
+.nav-logo {
+   max-width: 100%;
+}
+
+.slider {
+    /*margin: auto;*/
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.slider img {
+    height: 100%;
+    vertical-align: top;
+}

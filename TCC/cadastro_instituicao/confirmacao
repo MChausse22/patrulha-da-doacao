@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Confirmação</title>
+</head>
+<body>
+    <div>
+        <?php
+        $servername = 'localhost:3307';
+        $username = 'root';
+        $password = 'usbw';
+        $dbname = 'doacao';
+
+        $conexao = new mysqli($servername, $username, $password, $dbname);
+        if($conexao -> connect_error){
+            die("Erro de conexão: " . $conexao -> connect_error);
+        }
+
+        $insert = "INSERT INTO instituicao (i_nome, i_email, i_senha, i_seguimento_descricao, i_certificado_autentificacao, i_telefone, i_logradouro, i_complemento, i_uf, i_cep, i_cidade)
+                    VALUES ('"$_POST.['Nome']."', '".$_POST['Email']."', '".$_POST['Senha']."', '".$_POST['Seguimento']."', '".$_POST['CNPJ']."', '".$_POST['Telefone']."', '".$_POST['Logradouro']."', '".$_POST['Complemento']."', '".$_POST['UF']."', '".$_POST['CEP']."', '".$_POST['Cidade']."')";
+        
+        if($conexao -> query($insert) === TRUE){
+            echo '
+                <div class="w3-container w3-display-middle w3-purple w3-padding">
+                    <h2>Cadastro Concluído</h2>
+                </div>
+                ';
+        } else{
+            echo 'Cadastro não concluído';
+        }
+
+        $conexao->close();
+        ?>
+    </div>
+</body>
+</html>
