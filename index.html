@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="nav">
+        <ul class="nav-list">
+            <div class="nav-img">
+                <img src="../logo_branco-removebg-cut.png" id="logo" class="nav-logo">
+            </div>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Instituições</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Fale conosco</a>
+            </li>
+            <li>
+                <a href="" class="nav-link">Login | Cadastre-se</a>
+            </li>
+        </ul>
+    </header>
+
+    <div id="slider">
+
+        <div class="img-slide">
+            <img src="https://images.ecycle.com.br/wp-content/uploads/2021/05/20195924/o-que-e-paisagem.jpg">
+        </div>
+        
+        <div class="img-slide">
+            <img src="https://www.anselmohoffmann.com.br/wp-content/uploads/2021/05/Por-do-sol-na-fotografia-de-paisagem-7.jpg">
+        </div>
+        
+        <div class="img-slide">
+            <img src="https://static.vecteezy.com/ti/fotos-gratis/p1/1271888-montanha-paisagem-na-austria-gr%C3%A1tis-foto.jpg">
+        </div>
+
+        <div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+   <script>
+        var index = 1;
+        showSlides(index-1);
+
+        function plusSlides(n) {
+            showSlides(index += n)
+        }
+
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("img-slide");
+            var timer;
+            
+            if(n > slides){index = 1}
+            if(n < slides){index = slides.length}
+            
+            for(i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            index++
+            if(index > slides.length){index = 1}
+            slides[index-1].style.display = "block";
+           // timer = setTimeout(showSlides, 3000);
+        }
+    </script>
+    <div id="content">
+        <div id="about">
+            <div class="about-text">
+                <h2 class="text">Quem somos nós</h2>
+                <br>
+                <p class="text">
+                    Oi! Somos o grupo 05 do Trabalho de Conclusão de Curso de Desenvolvimento de Sistemas na Escola Técnica de São Paulo.
+                    <br>
+                    Atuamos, neste site, como uma "ponte" entre doadores e instituições.
+                </p>
+                <br>
+                <p>
+                    Gentileza gera gentileza! =)
+                </p>
+                <br>
+                <button>
+                    Saiba mais &#10003;
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
