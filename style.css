@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav {
+    padding: 10px;
+    box-shadow: 0px 3px 12px lightgray;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    border-bottom: 15px;
+}
+.nav a {
+    text-decoration-line: none;
+}
+.nav-img {
+    max-width: 25%;
+}
+.nav-logo {
+   max-width: 100%;
+}
+
+#login-form {
+    position: fixed;
+    overflow: auto;
+    z-index: 1;
+    right: 50%;
+    margin: auto;
+    width: 1000px;
+    height: 100%;
+    align-content: center;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#slider {
+    display: block; 
+    width: 858px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#slider img {
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 10%;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 10%;
+}
+.prev:hover, .next:hover {
+    background-color: lightgrey;
+}
+
+#content {
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.about-text {    
+    text-align: center;
+    width: 500px;
+    position: absolute;
+    right: 30px;
+}
