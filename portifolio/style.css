@@ -1,0 +1,590 @@
+
+/*Reset de tags*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+a:hover {
+    cursor: pointer;
+}
+
+/*Header*/
+.nav {
+    padding: 10px;
+    background-color: #d4fdf5;
+    transition: background-color 1s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 5px 5px 15px #cbcccc
+}
+.anim-about {
+    background-color: white ;
+    transition: background-color 0.7s ease;
+}
+.anim-valores {
+    background-color: #fdf6bf;
+    transition: background-color 0.7s ease;
+}
+.anim-instit {
+    background-color: white ;
+    transition: background-color 0.7s ease;
+}
+.anim-dep {
+    background-color: #edf2fb ;
+    transition: background-color 0.7s ease;
+}
+.anim-inscr {
+    background-color: white ;
+    transition: background-color 0.7s ease;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+    border-bottom: 15px;
+}
+.nav-img {
+    max-width: 25%;
+}
+.nav-logo {
+   max-width: 100%;
+}
+.nav-link {
+    border: 1px solid dimgrey;
+    border-radius: 35px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+    text-transform: lowercase;
+}
+.nav-link:hover {
+    background-color: #aff0f4;
+    box-shadow: 0px 0px 15px lightgray;
+}
+.login-link {
+    font-weight: bolder;
+}
+
+
+#about {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    height: 500px;
+}
+
+#textitens{
+    align-items: center;
+    margin-top: 100px;
+}
+
+#textitens h2{
+    margin-left: 270px;
+}
+
+#about p {
+    color: #949494;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*Botão saiba mais*/
+#saiba-mais {
+    margin-top: 100px;
+    margin-left: 300px;
+    font-size: medium;
+    font-weight: Roboto-Light;
+    background-color: white;
+    border: 1px solid dimgrey;
+    border-radius: 35px;
+    padding: 8px;
+    box-shadow: 0 0 15px lightgray;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+    text-transform: lowercase;
+
+}
+
+#saiba-mais:hover {
+    cursor: pointer;
+    visibility:visible;
+    opacity:1;
+    color: #111110;
+    background: rgb(233, 226, 163);
+    background: -webkit-linear-gradient(bottom, #e1ee6f, rgb(233, 226, 163));
+    -webkit-transition:all .4s;
+    -o-transition:all .4s;
+    -moz-transition:all .4s;
+    transition:all .4s;
+    align-items: center;
+    
+}
+
+#inscr-title{
+    margin: 0 0 60px 340px;
+}
+
+/*como se inscrever*/
+.card{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+}
+
+.card .content1{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter:   blur(20px);
+    border: 2px solid rgb(173, 175, 175);
+    border-radius: 20px;
+    color: rgb(58, 55, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.055);
+    transition: all .4s;
+    float:inline-end;
+}
+
+.card .content1 p{
+    font-size: 0.8em;
+    padding: 0.3em 1.5em;
+    text-align: center;
+}
+
+.card:hover .content1{
+    color: rgb(36, 36, 36);
+}
+
+.card::before,
+.card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: rgb(163, 233, 221);
+    z-index: -20;
+    transition: all .4s;
+    border-radius: 20px;
+}
+.card::before{
+    top:0;
+    right: 0;
+    border-radius: 20px;
+}
+.card::after{
+    bottom:0;
+    left: 0;
+    background: #d4fdf5;
+}
+.card:hover::before{
+    width: 50px;
+    height: 50px;
+    transform: translate(20px, -20px);
+    border-radius: 50%;
+}
+
+.card:hover::after{
+    width: 100px;
+    height: 100px;
+    transform: translate(-20px, 20px);
+    border-radius: 50%;
+}
+
+/*como se inscrever*/
+.card2{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    margin-left: 60px;
+}
+
+.card2 .content2{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter:   blur(20px);
+    border: 2px solid rgb(173, 175, 175);
+    color: rgb(55, 56, 58);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.055);
+    transition: all .4s;
+    float:inline-end;
+}
+
+.card2 .content2 p{
+    font-size: 0.8em;
+    padding: 0.3em 1.5em;
+    text-align: center;
+}
+
+.card2:hover .content2{
+    color: rgb(36, 36, 36);
+}
+
+.card2::before,
+.card2::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: rgb(163, 233, 221);
+    z-index: -20;
+    transition: all .4s;
+    border-radius: 20px;
+}
+.card2::before{
+    top:0;
+    right: 0;
+    border-radius: 20px;
+}
+.card2::after{
+    bottom:0;
+    left: 0;
+    background: #d4fdf5;
+}
+.card2:hover::before{
+    width: 50px;
+    height: 50px;
+    transform: translate(20px, -20px);
+    border-radius: 50%;
+}
+
+.card2:hover::after{
+    width: 100px;
+    height: 100px;
+    transform: translate(-20px, 20px);
+    border-radius: 50%;
+}
+
+/*como se inscrever*/
+.card3{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    margin-left: 60px;
+}
+
+.card3 .content3{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter:   blur(20px);
+    border: 2px solid rgb(173, 175, 175);
+    border-radius: 20px;
+    color: rgb(58, 55, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.055);
+    transition: all .4s;
+    float:inline-end;
+}
+
+.card3 .content3 p{
+    font-size: 0.8em;
+    padding: 0.3em 1.5em;
+    text-align: center;
+}
+
+.card3:hover .content3{
+    color: rgb(36, 36, 36);
+}
+
+.card3::before,
+.card3::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: rgb(163, 233, 221);
+    z-index: -20;
+    transition: all .4s;
+    border-radius: 20px;
+}
+.card3::before{
+    top:0;
+    right: 0;
+    border-radius: 20px;
+}
+.card3::after{
+    bottom:0;
+    left: 0;
+    background: #d4fdf5;
+}
+.card3:hover::before{
+    width: 50px;
+    height: 50px;
+    transform: translate(20px, -20px);
+    border-radius: 50%;
+}
+
+.card3:hover::after{
+    width: 100px;
+    height: 100px;
+    transform: translate(-20px, 20px);
+    border-radius: 50%;
+}
+
+#inscr{
+    display: grid;
+    text-align: left;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    margin: 20px 0 140px 30px;
+}
+
+li{
+    display: inline;
+}
+
+
+/*Slides*/
+#slider {
+    display: block; 
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 75px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #d4fdf5;
+}
+#slider img {
+    width: 550px;
+    vertical-align: top;
+    margin: 0 auto;
+    border: 25px solid #00adb7;
+    border-radius: 50px;
+}
+
+/*Setas*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 10%;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 10%;
+}
+.prev:hover, .next:hover {
+    color: #00adb7;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot:hover, .active {
+    background-color: #717171;
+}
+
+/**/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*Conteúdo da página*/
+
+ #valores, #instituicoes {
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+/*Quem somos nós*/
+
+#align-image{
+    float: right;
+}
+
+#align-image2{
+    float: right;
+    margin-left: 120px;
+}
+
+.about-text {
+    text-align: center;
+    width: 500px;
+    position: absolute;
+    right: 50px;
+}
+
+/*Nossos Valores*/
+#valores {
+    display: block;
+    height: 400px;
+    background-color: #fdf6bf;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(219, 217, 217);
+}
+.valores-text {
+    margin-top: 150px;
+    margin-left: 150px;
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    
+}
+.valores-text p {
+    color: #9e9e93;
+}
+
+/*Instituições cadastradas*/
+#instituicoes {
+    margin-top: 100px;
+    text-align: center;
+}
+#inst-logos {
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px;
+    justify-content: space-around;
+    padding: 70px;
+    text-align: center;
+}
+.inst-img {
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: 0 0 15px lightgray;
+    width: 160px;
+    height: 140px;
+}
+
+.inst-img img {
+    width: 160px;
+    align-items: center;
+    display: block;
+    margin-top: none;
+}
+
+/*Depoimentos*/
+#depoimentos {
+    margin-top: 100px;
+    padding-top: 15px;
+    text-align: center;
+    background-color: #edf2fb;
+    height: 500px;
+}
+
+
+#depoimentos h1 {
+    font-weight: 500;
+    font-size: 3em;
+}
+#depoimentos h1, #dep-subTitle {
+    color: #2d3c7f;
+}
+#dep-subTitle {
+    font-weight: bold;
+}
+
+/*Como se inscrever*/
+#comoinsc {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.inscr-container {
+    padding: 70px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-around;
+}
+.inscr {
+    height: 350px;
+    /*border: 2px solid lightgray;*/
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 130px;
+}
+.inscr p {
+    color: rgb(153, 153, 153);
+}
+
+/*Footer*/
+footer {
+    background-color: #fefae0;
+    padding: 16px;
+    padding-top: 40px;
+    text-align: center;
+    font-weight: lighter;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    text-align: left;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+footer ul{
+    padding-top: 10px;
+}
+
+

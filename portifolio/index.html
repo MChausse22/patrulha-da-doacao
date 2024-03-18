@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="indexIcones.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="../jquery-3.6.0.js"></script>
+    <script src="script.js"></script>
+    <title>PATRULHA DA DOAÇÃO</title>
+</head>
+
+<body>
+    <header class="nav">
+        <ul class="nav-list">
+            <div class="nav-img">
+                <img src="imagens/images/logo_branco-removebg-cut.png" id="logo" class="nav-logo">
+            </div>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+                <a href="#instituicoes" class="nav-link">Instituições</a>
+            </li>
+            <li class="nav-item">
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+            </li>
+            <li class="nav-item">
+                <a href="#footer" class="nav-link">Fale conosco</a>
+            </li>
+            <li>
+                <a class="login-link"  href="index.php" id="login-link">Login</a>
+            </li>
+            <li>
+                <a class="login-link"  href="cadastrar.php" id="login-link">Cadastre-se</a>
+            </li>
+        </ul>
+
+        <script>
+            $(function () {
+                $(window).on("scroll", function () {
+                    if ($(window).scrollTop() > 650) {
+                        $(".nav").addClass("anim-about");
+                    } else {
+                        $(".nav").removeClass("anim-about");
+                    }
+
+                    if ($(window).scrollTop() > 1245) {
+                        $(".nav").addClass("anim-valores")
+                    } else {
+                        $(".nav").removeClass("anim-valores")
+                    }
+
+                    if ($(window).scrollTop() > 1634) {
+                        $(".nav").addClass("anim-instit")
+                    } else {
+                        $(".nav").removeClass("anim-instit")
+                    }
+
+                    if ($(window).scrollTop() > 2225) {
+                        $(".nav").addClass("anim-dep")
+                    } else {
+                        $(".nav").removeClass("anim-dep")
+                    }
+
+                    if ($(window).scrollTop() > 2740) {
+                        $(".nav").addClass("anim-inscr")
+                    } else {
+                        $(".nav").removeClass("anim-inscr")
+                    }
+                });
+            });
+        </script>
+    </header>
+
+    <!--slides-->
+    <div id="slider">
+        <div class="images">
+            <div class="img-slide fade">
+                <img src="imagens/images/1.png">
+            </div>
+
+            <div class="img-slide fade">
+                <img src="imagens/images/2.png">
+            </div>
+
+            <div class="img-slide fade">
+                <img src="imagens/images/3.png">
+            </div>
+        </div>
+
+        <div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            var index = 1;
+            var timer = null;
+            showSlides(index);
+
+            function plusSlides(n) {
+                clearTimeout(timer);
+                showSlides(index += n);
+            }
+
+            function currentSlide(n) {
+                clearTimeout(timer);
+                showSlides(index = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("img-slide");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { index = 1 }
+                if (n < 1) { index = slides.length }
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                index++;
+                if (index > slides.length) { index = 1 }
+                slides[index - 1].style.display = "block";
+                dots[index - 1].className += " active";
+                timer = setTimeout(showSlides, 4000);
+            }
+        </script>
+    </div>
+
+    <div id="content">
+
+        <!--QUEM SOMOS NÓS-->
+        <div id="about">
+            <div id="align-image">
+                <img src="imagens/images/quems.png" width="550px" height="400px">
+            </div>
+            <div id="textitens">
+                <h2>Quem somos nós?</h2>
+                <br>
+                <p class="text">
+                    Oi! Somos o grupo 05 do Trabalho de Conclusão de Curso de
+                    <br>
+                    Desenvolvimento de Sistemas na Escola Técnica de São Paulo.
+                    <br>
+                    Atuamos, neste site, como uma "ponte" entre doadores e instituições.
+                    <br>
+                    Gentileza gera gentileza! =)
+                </p>
+                <br>
+                <button id="saiba-mais">
+                    Saiba mais &#10003;
+                </button>
+            </div>
+        </div>
+
+        <!--NOSSOS VALORES-->
+        <div id="valores">
+            <div id="align-image2">
+                <img src="imagens/images/missao.png" width="550px" height="380px">
+            </div>
+            <div class="valores-text">
+                <h3>Nossos Valores</h3>
+                <br>
+                <p class="text">
+                    Queremos levar gentileza e poder conectar pessoas à outras pessoas,
+                    que precisam de carinho e afeto através de um gesto nobre, a doação
+                </p>
+            </div>
+        </div>
+
+        <!--INSTITUIÇÕES-->
+        <div id="instituicoes">
+            <h2>Instituições Parceiras</h2>
+            <div id="inst-logos">
+
+                <div id="animals">
+                    <h5 class="inst-tt">ANIMAIS</h5>
+                    <div class="inst-img">
+                        <a href="">
+                            <img src="imagens/images/10.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div id="elderly">
+                    <h5 class="inst-tt">IDOSOS</h5>
+                    <div class="inst-img">
+                        <a href="">
+                            <img src="imagens/images/11.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div id="kids">
+                    <h5 class="inst-tt">CRIANÇAS</h5>
+                    <div class="inst-img">
+                        <a>
+                            <img src="imagens/images/12.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div id="women">
+                    <h5 class="inst-tt">MULHERES</h5>
+                    <div class="inst-img">
+                        <a href="">
+                            <img src="imagens/images/13.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--DEPOIMENTOS-->
+    <div id="depoimentos">
+            <div>
+                <h1>Depoimentos</h1>
+                <p id="dep-subTitle">O que as pessoas dizem</p>
+            </div>
+    </div>
+
+    
+
+    <div id="inscr">
+        <!--INSCREVER-->
+        <div id="inscr-title">
+            <h2>Como se inscrever</h2>
+        </div>
+        <ul>
+            <!--Doador-->
+            <li>
+                <div class="card">
+                    <div class="content1">
+                        <div id="inscr-doad" class="inscr">
+                            <h4>1. Seja Doador</h4>
+                            <br>
+                            <p>Doe esperança!</p>
+                            <p>Faça seu cadastro no site e escolha sua instituição</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Instituições-->
+            <li>
+                <div class="card2">
+                    <div class="content2">
+                        <div id="inscr-inst" class="inscr">
+                            <h4>2. Instituições</h4>
+                            <br>
+                            <p>Cadastre sua instituição aqui!</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Benefícios-->
+
+            <li>
+                <div class="card3">
+                    <div class="content3">
+                        <div id="inscr-benef" class="inscr">
+                            <h4>3. Benefícios</h4>
+                            <br>
+                            <p>Como nosso lema:</p>
+                            <p>Gentileza gera gentileza =)</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div id="about-footer">
+                <h4>ABOUT</h4>
+                <ul>
+                    <li><a href="#about">Nossa Missão</a></li>
+                    <li><a href="#instituicoes">Instituições</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+            </div>
+            <div id="FAQ">
+                <h4>FAQ</h4>
+                <ul>
+                    <li>Regras</li>
+                    <li>Mensagens</li>
+                    <li>Edições</li>
+                    <li>Contribuições</li>
+                </ul>
+            </div>
+            <div id="contatos">
+                <h4>CONTATOS</h4>
+                <ul>
+                    <li>email@etec.gov.sp.br</li>
+                    <li>(11) 99999-9999</li>
+                    <li>(11) 8888-8888</li>
+                </ul>
+            </div>
+            <div id="redes">
+                <h4>NOS SIGA</h4>
+            </div>
+        </div>
+        <br>
+        <div>
+            <p>
+                Copyright Grupo 5 2021. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
